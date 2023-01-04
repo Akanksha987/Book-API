@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+![Logo-nav](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/Kalvium-Logo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Learning Goals:
 
-In the project directory, you can run:
+The aim of this lab is to use `axios` and fetch data from an external api.
 
-### `npm start`
+Use the following code - to fetch the api:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`axios.get("https://reactnd-books-api.udacity.com/book",{ headers: { 'Authorization': 'whatever-you-want' }})`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+***NOTE:*** The above piece of code is not enough to get data from the given api, you need to use `.then` in order to resolve the `promise` into the API's response.
+If there is any error -> print that error on console.
+If the status code === 404: then display as shown below:
 
-### `npm test`
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/react-api-error-ss.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+(**You can experiment this by giving a wrong url**)
 
-### `npm run build`
+The above exercise will help you to play around error handling through axios.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Steps to follow:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Create a new react app. Name it as `react-api`
+2. Display the following content by fetching the data, from the above given api.
 
-### `npm run eject`
+    1. Title of the book
+    2. Image of the book (in the given api --> there are two image links --> you can use any-one)
+    3. Descripition of the book
+    4. Authors of the book
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Here is demo of the final output:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](https://s3.ap-south-1.amazonaws.com/kalvi-education.github.io/front-end-web-development/react-api-books.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy Coding ❤️!
